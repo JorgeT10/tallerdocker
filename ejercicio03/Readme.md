@@ -8,4 +8,4 @@ Pista: puedes utilizar el comando "docker inspect" o la herramienta dive (https:
 Steps:
 1) Run ``docker pull nicopaez/passwordapi-java:java8-alpine`` and ``docker pull nicopaez/passwordapi-java:java8-fabric`` .
 2) See attached images
-3) 
+3) Both have the same base image ``alpine:latest``
