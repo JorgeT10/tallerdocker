@@ -7,7 +7,7 @@ Finalmente contesta:
 ¿Puedes leer el docker-compose.yml y describir lo que hace cada una de sus lineas?
 Dado que cada contenedor corre en forma aislada ¿Cómo es posible que esos contenedores se vean entre sí?
 
-
+##
 Escribe tus respuestas ejercicio07/README.md en tu repositorio github y entrega el link directo al archivo.
 
 ¿Cuántos contenedores se están ejecutando? (pueden verlo en el archivo docker-compose.yml y también ejecutando docker ps)
