@@ -1,0 +1,36 @@
+version: '3.9'
+
+services:
+  web:
+    image: nicopaez/jobvacancy-ruby:1.3.0
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: "3000"
+      RACK_ENV: "production"
+      DATABASE_URL: "postgres://postgres:Passw0rd!@db:5432/postgres"
+    networks:
+      - web_db_network
+      - db_network
+    depends_on:
+      - db
+
+  db:
+    image: postgres:14.4-alpine
+    secrets:
+      - db_secret
+    environment:
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_secret
+    networks:
+      - db_network
+
+networks:
+  web_db_network:
+    internal: true
+
+  db_network:
+    internal: true
+
+secrets:
+  db_secret:
+    file: ./db_secret.txt
