@@ -10,7 +10,7 @@ services:
       RACK_ENV: "production"
       DATABASE_URL: "postgres://postgres:Passw0rd!@db:5432/postgres"
     networks:
-      - web_db_network
+      - web_network
       - db_network
     depends_on:
       - db
@@ -25,8 +25,7 @@ services:
       - db_network
 
 networks:
-  web_db_network:
-    internal: true
+  web_network:
 
   db_network:
     internal: true
