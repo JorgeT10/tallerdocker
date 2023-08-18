@@ -6,5 +6,5 @@ el README.md con la forma correrlo y cualquier explicación que consideres relev
 
 Steps
 
-1) run ``docker-compose up --scale pwdapi=2``
-2) Browse http://localhost:4000/health
+1) run ``docker compose up``
+2) Browse http://localhost:3000/health
